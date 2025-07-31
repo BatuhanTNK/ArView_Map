@@ -1,0 +1,22 @@
+// Bu bloğu tamamen aşağıdakiyle değiştirin
+buildscript {
+    ext {
+        buildToolsVersion = "34.0.0"
+        minSdkVersion = 24
+        compileSdkVersion = 34
+        targetSdkVersion = 34
+        ndkVersion = "25.1.8937393"
+        playServicesLocationVersion = "21.0.1"
+        kotlinVersion = "1.8.0" // Kotlin versiyonunu da ekliyoruz
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Android Gradle Plugin sürümünü 8.1.1 veya üstü yapıyoruz
+        classpath("com.android.tools.build:gradle:8.1.1")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion") // Kotlin plugin'i ekliyoruz
+    }
+}
