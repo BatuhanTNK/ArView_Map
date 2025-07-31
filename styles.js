@@ -2,7 +2,26 @@ import { StyleSheet } from 'react-native';
 import { ViroMaterials } from '@reactvision/react-viro';
 
 export const styles = StyleSheet.create({
-  // --- MEVCUT STİLLERİNİZ ---
+  // --- Genel Uygulama Stilleri ---
+  container: { 
+    flex: 1, 
+    backgroundColor: '#121212' 
+  },
+  centered: { 
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    backgroundColor: '#121212' 
+  },
+  errorText: { 
+    color: '#FF6B6B', 
+    textAlign: 'center', 
+    marginTop: 20, 
+    paddingHorizontal: 20, 
+    fontSize: 16 
+  },
+
+  // --- AR Ekranı Stilleri ---
   focusedPlaceContainer: {
     position: 'absolute',
     bottom: 30,
@@ -26,20 +45,74 @@ export const styles = StyleSheet.create({
     height: 50,
     borderRadius: 8,
   },
-  container: { flex: 1, backgroundColor: '#121212' },
-  centered: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#121212' },
-  errorText: { color: '#FF6B6B', textAlign: 'center', marginTop: 20, paddingHorizontal: 20, fontSize: 16 },
-  placeCard: { backgroundColor: '#282828', padding: 20, marginVertical: 8, borderRadius: 12, borderWidth: 1, borderColor: '#404040' },
-  placeName: { color: 'white', fontSize: 18, fontWeight: 'bold' },
-  placeType: { color: '#B3B3B3', fontSize: 14, marginTop: 4 },
-  arButton: { position: 'absolute', top: 50, right: 20, backgroundColor: '#1DB954', paddingVertical: 12, paddingHorizontal: 20, borderRadius: 25, elevation: 8, shadowColor: '#000', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 4 },
-  arButtonText: { color: 'white', fontSize: 18, fontWeight: 'bold' },
-  modalContainer: { flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.9)', justifyContent: 'center', alignItems: 'center' },
-  fullscreenImage: { width: '100%', height: '80%' },
-  closeButton: { position: 'absolute', top: 50, right: 20, backgroundColor: 'rgba(255, 255, 255, 0.2)', borderRadius: 20, width: 40, height: 40, justifyContent: 'center', alignItems: 'center', zIndex: 1 },
-  closeButtonText: { color: 'white', fontSize: 20, fontWeight: 'bold' },
+  
+  
 
-  // --- YENİ EKLENEN HARİTA VE BUTON STİLLERİ ---
+  // --- Liste/Harita Ekranı Stilleri ---
+  placeCard: { 
+    backgroundColor: '#282828', 
+    padding: 20, 
+    marginVertical: 8, 
+    borderRadius: 12, 
+    borderWidth: 1, 
+    borderColor: '#404040' 
+  },
+  placeName: { 
+    color: 'white', 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  },
+  placeType: { 
+    color: '#B3B3B3', 
+    fontSize: 14, 
+    marginTop: 4 
+  },
+  arButton: { 
+    position: 'absolute', 
+    top: 50, 
+    right: 20, 
+    backgroundColor: '#1DB954', 
+    paddingVertical: 12, 
+    paddingHorizontal: 20, 
+    borderRadius: 25, 
+    elevation: 8, 
+    shadowColor: '#000', 
+    shadowOffset: { width: 0, height: 4 }, 
+    shadowOpacity: 0.3, 
+    shadowRadius: 4 
+  },
+  arButtonText: { 
+    color: 'white', 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  },
+  modalContainer: { 
+    flex: 1, 
+    backgroundColor: 'rgba(0, 0, 0, 0.9)', 
+    justifyContent: 'center', 
+    alignItems: 'center' 
+  },
+  fullscreenImage: { 
+    width: '100%', 
+    height: '80%' 
+  },
+  closeButton: { 
+    position: 'absolute', 
+    top: 50, 
+    right: 20, 
+    backgroundColor: 'rgba(255, 255, 255, 0.2)', 
+    borderRadius: 20, 
+    width: 40, 
+    height: 40, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    zIndex: 1 
+  },
+  closeButtonText: { 
+    color: 'white', 
+    fontSize: 20, 
+    fontWeight: 'bold' 
+  },
   map: {
     ...StyleSheet.absoluteFillObject,
   },
@@ -75,7 +148,5 @@ export const styles = StyleSheet.create({
 ViroMaterials.createMaterials({ 
   backgroundMaterial: { 
     diffuseColor: 'rgba(0, 0, 0, 0.5)',
-    writesToDepthBuffer: true,
-    readsFromDepthBuffer: true 
   } 
 });
